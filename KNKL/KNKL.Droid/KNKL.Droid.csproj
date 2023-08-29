@@ -1,0 +1,919 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{01F71B8D-B98C-4F71-BEF1-29CEA646900B}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KNKL.Droid</RootNamespace>
+    <AssemblyName>KNKL.Droid</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Android\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Android\Release\</OutputPath>
+    <DefineConstants>TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="box2d, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CocosSharp.PCL.Shared.1.5.0.1\lib\MonoAndroid10\box2d.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CocosSharp, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CocosSharp.PCL.Shared.1.5.0.1\lib\MonoAndroid10\CocosSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lidgren.Network, Version=2012.1.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CocosSharp.PCL.Shared.1.5.0.1\lib\MonoAndroid10\Lidgren.Network.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="MonoGame.Framework, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CocosSharp.PCL.Shared.1.5.0.1\lib\MonoAndroid10\MonoGame.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Portable.Ninject.3.3.1\lib\monoandroid\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenTK" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveLoadXml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\10.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\11.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\12.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\13.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\14.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\15.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\16.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\17.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\18.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\19.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\20.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\3.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\4.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\5.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\6.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\7.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\8.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\take\9.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Talk\talk %281%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Talk\talk %282%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Talk\talk %283%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Talk\talk %284%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\10.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\11.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\12.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\13.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\14.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\15.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\16.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\17.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\18.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\19.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\20.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\21.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\22.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\23.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\24.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\25.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\26.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\27.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\28.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\3.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\30.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\31.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\32.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\33.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\34.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\35.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\36.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\37.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\38.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\39.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\4.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\40.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\41.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\42.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\43.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\44.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\45.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\5.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\6.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\7.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\8.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\9.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\bazina.ogg.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\klaster01.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\klaster02.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\klaster03.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\klaster04.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\klaster05.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\klaster05_short.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\klaster05_short2.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\klaster06.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\klaster07.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\klaster08.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\klaster09.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\klaster09_zkraceny.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\klaster10.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\klaster11.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Interface\MenuButton.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Interface\InventoryButton.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\background.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\idle.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\3.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\4.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\5.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\6.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\7.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\8.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\9.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\10.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\11.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\12.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\13.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\14.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\15.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\16.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\17.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\18.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\19.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\walk\20.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\idle.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\walk\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\walk\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\walk\2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\walk\3.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\walk\4.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\walk\5.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\walk\6.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\walk\7.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\walk\8.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\walk\9.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\idle.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\10.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\11.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\12.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\13.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\14.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\15.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\16.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\17.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\18.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\19.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\20.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\3.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\4.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\5.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\6.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\7.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\8.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\walk\9.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\talk\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\talk\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\talk\2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\talk\3.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\talk\4.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\talk\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\talk\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\talk\2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\talk\3.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\talk\4.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\ll\talk\5.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\talk\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\talk\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\talk\2.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\kde.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\dloubat.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\hnojnik.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\jizdni_rad.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\mapa.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\mapu.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\nebudu_bavit.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\nema_cenu.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\probuzeni.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\rukavice.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\ruzenec.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\semafor.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\tam.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\tlacitko.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\ul.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\utikej.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\vlak.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\zakrouzkovano.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\zavreno.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\zdrha.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\idle.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\talk\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\talk\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\talk\2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\talk\3.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\talk\4.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\walk\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\walk\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\walk\2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\walk\3.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\walk\4.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\walk\5.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\walk\6.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\walk\7.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\walk\8.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\walk\9.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Interface\ActiveItemFrame.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\zapalovac.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\tenis.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\svetr.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\svacina.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\strep.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\steak2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\steak.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\sperhak.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\sklenice piva.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\ruze.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\rukavice.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\prkna.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\prak_nabity.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\prak.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\pivo.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\pila.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\papir.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\panev_steak2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\panev_steak.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\panev.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\okurky.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\meda.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\mapa.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\lih.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\kybl_voda.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\kybl.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\kondom.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\kniha.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\klubicko.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\klic.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\kleste.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\kladivo.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\klacek.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\kamen.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\CHLOROFORM.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\hrebiky2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\hrebiky1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\hovno.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\hadr.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\fotak.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\drat.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\cukr_vata_s_muchami.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\cukr_vata.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\baterky.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\70.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\50.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\30.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\4.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\3.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\19.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\18.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\17.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\16.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\15.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\14.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\13.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\12.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\11.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\10.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\9.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\8.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\7.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\6.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\5.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\20.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\19.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\18.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\17.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\16.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\15.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\14.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\13.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\12.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\11.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\10.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\9.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\8.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\7.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\6.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\5.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\4.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\3.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\rr\take\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\19.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\18.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\17.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\16.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\15.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\14.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\13.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\12.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\11.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\10.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\9.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\8.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\7.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\6.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\5.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\4.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\3.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\uu\take\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\options_1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\options.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\clickSound.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\background.xnb" />
+    <AndroidAsset Include="Assets\Content\Music\bazina.ogg.ogg" />
+    <AndroidAsset Include="Assets\Content\Music\klaster01.ogg" />
+    <AndroidAsset Include="Assets\Content\Music\klaster02.ogg" />
+    <AndroidAsset Include="Assets\Content\Music\klaster03.ogg" />
+    <AndroidAsset Include="Assets\Content\Music\klaster04.ogg" />
+    <AndroidAsset Include="Assets\Content\Music\klaster05.ogg" />
+    <AndroidAsset Include="Assets\Content\Music\klaster05_short.ogg" />
+    <AndroidAsset Include="Assets\Content\Music\klaster05_short2.ogg" />
+    <AndroidAsset Include="Assets\Content\Music\klaster06.ogg" />
+    <AndroidAsset Include="Assets\Content\Music\klaster07.ogg" />
+    <AndroidAsset Include="Assets\Content\Music\klaster08.ogg" />
+    <AndroidAsset Include="Assets\Content\Music\klaster09.ogg" />
+    <AndroidAsset Include="Assets\Content\Music\klaster09_zkraceny.ogg" />
+    <AndroidAsset Include="Assets\Content\Music\klaster10.ogg" />
+    <AndroidAsset Include="Assets\Content\Music\klaster11.ogg" />
+    <AndroidAsset Include="Assets\Content\Graphics\Interface\InventoryFrame.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\inventory_open.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\foreground.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Items\noItem.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\nejde_to.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\klacek.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\take\20.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\90.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\89.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\88.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\87.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\86.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\85.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\84.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\83.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\82.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\81.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\80.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\79.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\78.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\77.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\76.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\75.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\74.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\73.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\72.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\71.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\70.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\69.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\68.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\67.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\66.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\65.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\64.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\63.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\62.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\61.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\60.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\59.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\58.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\57.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\56.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\55.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\54.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\53.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\52.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\51.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\50.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\49.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\48.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\47.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\01_nadrazi\vcely\46.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\idle.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Talk\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Talk\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Talk\2.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Talk\3.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\dedek\aaaaaa.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\dedek\do_ceho.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\dedek\dobrej.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\dedek\jeste_jednou_ne.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\dedek\kam.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\dedek\kam_jedes.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\dedek\kde_sakra.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\dedek\ne.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\dedek\nic_nenasel.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\dedek\v_zivote.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_dedek\aspon_podivat.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_dedek\do_ruzence.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_dedek\dobry.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_dedek\dostat_se.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_dedek\jeste_jednou.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_dedek\jizdni_rad.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_dedek\nevite.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_dedek\pocitac.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_dedek\ruka.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_dedek\tezsi.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %281%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2810%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2811%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2812%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2813%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2814%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2815%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2816%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2817%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2818%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2819%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %282%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2820%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2821%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2822%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2823%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2824%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2825%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2826%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2827%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2828%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2829%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %283%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2830%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2831%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2832%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2833%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2834%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2835%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2836%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2837%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2838%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2839%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %284%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2840%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2841%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2842%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2843%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2844%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2845%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2846%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2847%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2848%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2849%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %285%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2850%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2851%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2852%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2853%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2854%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2855%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2856%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2857%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2858%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2859%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %286%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2860%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2861%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2862%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2863%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2864%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2865%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2866%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2867%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2868%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2869%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %287%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %2870%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %288%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Eating\eat %289%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %281%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2810%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2811%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2812%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2813%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2814%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2815%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2816%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2817%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2818%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2819%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %282%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2820%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2821%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2822%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2823%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2824%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2825%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2826%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2827%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2828%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2829%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %283%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2830%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2831%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2832%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2833%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2834%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2835%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2836%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2837%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2838%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2839%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %284%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2840%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2841%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2842%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2843%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2844%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2845%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2846%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2847%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2848%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2849%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %285%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2850%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2851%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2852%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2853%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2854%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2855%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2856%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2857%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2858%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2859%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %286%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2860%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2861%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2862%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2863%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2864%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2865%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2866%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2867%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2868%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2869%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %287%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2870%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2871%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2872%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2873%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2874%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2875%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2876%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2877%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2878%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2879%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %288%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2880%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2881%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2882%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2883%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2884%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2885%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2886%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2887%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2888%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2889%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %289%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2890%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2891%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\Running\running %2892%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Prcek\idle.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_prcek\pomahej.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_prcek\nechci_snist.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_prcek\nazdar.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_prcek\maminka.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_prcek\jo.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_prcek\drzi.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_prcek\dostat_se.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_prcek\cukr.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\prcek\008.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\prcek\007.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\prcek\006.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\prcek\005.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\prcek\004.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\prcek\003.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\prcek\002.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\prcek\001.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2835%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2834%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2833%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2832%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2831%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2830%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2829%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2828%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2827%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2826%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2825%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2824%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2823%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2822%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2821%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2820%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2819%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2818%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2817%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2816%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2815%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2814%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2813%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2812%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2811%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2810%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %289%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %288%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %287%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %286%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %285%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %284%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %283%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %282%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %281%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2840%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2839%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2838%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2837%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Actors\Jenik\dd\bees\bees %2836%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\vcely_nebezpecne.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\s_rukavici.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %282%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2855%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2854%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2853%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2852%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2851%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2850%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2849%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2848%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2847%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2846%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2845%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2844%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2843%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2842%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2841%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2840%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2839%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2838%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2837%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2836%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2835%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2834%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2833%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2832%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2831%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2830%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2829%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2828%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2827%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2826%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2825%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2824%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2823%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2822%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2821%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2820%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2819%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2818%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2817%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2816%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2815%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2814%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2813%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2812%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2811%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %2810%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %289%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %288%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %287%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %286%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %285%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %284%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Characters\Dedek\Bees\bees %283%29.xnb" />
+    <AndroidAsset Include="Assets\Content\Voice\jenik_nadrazi\strep.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\options_background_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\options_background_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\OptionsItems\arrow_left.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\OptionsItems\subtitles_on.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\OptionsItems\subtitles_off.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\OptionsItems\slider.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\OptionsItems\circle.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\OptionsItems\arrow_right.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\OptionsItems\Languages\cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\OptionsItems\Languages\en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\Buttons\back_1_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\Buttons\back_1_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\Buttons\back_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\Buttons\back_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\Buttons\save_1_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\Buttons\save_1_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\Buttons\save_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\Buttons\save_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\continue_1_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\save_game_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\save_game_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\save_game_2_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\save_game_2_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\save_game_1_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\save_game_1_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\quit_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\quit_1_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\new_game_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\new_game_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\new_game_1_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\new_game_1_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\load_game_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\load_game_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\load_game_1_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\load_game_1_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\credits_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\credits_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\credits_1_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\credits_1_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\continue_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\continue_cz.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\MenuItems\continue_1_en.xnb" />
+    <AndroidAsset Include="Assets\Content\Font\Bebas.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\save_game_background.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Scenes\00_menu\SaveItems\field.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Loading\1.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Loading\0.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Loading\12.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Loading\11.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Loading\10.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Loading\9.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Loading\8.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Loading\7.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Loading\6.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Loading\5.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Loading\4.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Loading\3.xnb" />
+    <AndroidAsset Include="Assets\Content\Graphics\Loading\2.xnb" />
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Layout\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KNKL\KNKL.csproj">
+      <Name>KNKL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\bazina.ogg.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\klaster01.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\klaster02.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\klaster03.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\klaster04.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\klaster05.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\klaster05_short.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\klaster05_short2.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\klaster06.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\klaster07.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\klaster08.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\klaster09.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\klaster09_zkraceny.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\klaster10.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Music\klaster11.m4a" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Subtitles\cz\01_nadrazi.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Subtitles\en\01_nadrazi.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Subtitles\cz\Items.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Subtitles\en\Items.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Subtitles\cz\Scenes.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Subtitles\en\Scenes.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

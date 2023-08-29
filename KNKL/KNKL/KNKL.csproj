@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{53BCBF03-154D-4D24-B0C1-9027D62E1D60}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KNKL</RootNamespace>
+    <AssemblyName>KNKL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Actor\Animations.cs" />
+    <Compile Include="Actor\Animations\Jenik\dd\BeesDownAnimation.cs" />
+    <Compile Include="Actor\Animations\Jenik\dd\TakeDown1Animation.cs" />
+    <Compile Include="Actor\Animations\Jenik\dd\TakeDown2Animation.cs" />
+    <Compile Include="Actor\Animations\Jenik\dd\TalkDownAnimation.cs" />
+    <Compile Include="Actor\Animations\Jenik\ll\GoLeftAnimation.cs" />
+    <Compile Include="Actor\Animations\Jenik\ll\TakeLeft1Animation.cs" />
+    <Compile Include="Actor\Animations\Jenik\ll\TakeLeft2Animation.cs" />
+    <Compile Include="Actor\Animations\Jenik\ll\TalkLeftAnimation.cs" />
+    <Compile Include="Actor\Animations\Jenik\rr\GoRightAnimation.cs" />
+    <Compile Include="Actor\Animations\Jenik\rr\TakeRight1Animation.cs" />
+    <Compile Include="Actor\Animations\Jenik\rr\TakeRight2Animation.cs" />
+    <Compile Include="Actor\Animations\Jenik\rr\TalkRightAnimation.cs" />
+    <Compile Include="Actor\Animations\Jenik\uu\GoUpAnimation.cs" />
+    <Compile Include="Actor\Animations\Jenik\uu\TakeUp1Animation.cs" />
+    <Compile Include="Actor\Animations\Jenik\uu\TakeUp2Animation.cs" />
+    <Compile Include="Actor\Animations\Jenik\uu\TalkUpAnimation.cs" />
+    <Compile Include="Actor\Direction.cs" />
+    <Compile Include="Actor\Inventory.cs" />
+    <Compile Include="Actor\Talking.cs" />
+    <Compile Include="Actor\Walking.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Characters\Dedek\Dedek.cs" />
+    <Compile Include="Characters\Dedek\DedekIdleAnimation.cs" />
+    <Compile Include="Characters\Dedek\DedekRunningAnimation.cs" />
+    <Compile Include="Characters\Dedek\DedekTalkAnimation.cs" />
+    <Compile Include="Characters\Prcek\Prcek.cs" />
+    <Compile Include="Characters\Prcek\PrcekIdleAnimation.cs" />
+    <Compile Include="Characters\Prcek\PrcekRunningAnimation.cs" />
+    <Compile Include="Characters\Prcek\PrcekTalkAnimation.cs" />
+    <Compile Include="Core\Character.cs" />
+    <Compile Include="Core\SaveLoad\ISaveLoadXml.cs" />
+    <Compile Include="Core\SaveLoad\Options.cs" />
+    <Compile Include="Core\SaveLoad\SaveLoadGame.cs" />
+    <Compile Include="Core\Scene\SceneCharacters.cs" />
+    <Compile Include="Core\Scene\SceneSubtitles.cs" />
+    <Compile Include="Core\Subtitles\Subtitle.cs" />
+    <Compile Include="Core\Subtitles\XmlParser.cs" />
+    <Compile Include="Core\Visuals\CCArrow.cs" />
+    <Compile Include="Core\Visuals\CCButton.cs" />
+    <Compile Include="Core\Visuals\CCCheckBox.cs" />
+    <Compile Include="Core\Visuals\CCPolygon.cs" />
+    <Compile Include="Core\GameAdventure.cs" />
+    <Compile Include="Core\Items\GameItem.cs" />
+    <Compile Include="Core\Items\InventoryItem.cs" />
+    <Compile Include="Actor\Animations\Jenik\dd\GoDownAnimation.cs" />
+    <Compile Include="Actor\Jenik.cs" />
+    <Compile Include="Core\Scene\InventoryLayer.cs" />
+    <Compile Include="Core\Scene\MenuLayer.cs" />
+    <Compile Include="Core\Scene\GameScene.cs" />
+    <Compile Include="Core\Scene\TextLayer.cs" />
+    <Compile Include="Core\Media\VoicePlayer.cs" />
+    <Compile Include="Core\Visuals\CCSaveSlot.cs" />
+    <Compile Include="Core\Visuals\CCSlider.cs" />
+    <Compile Include="IntroLayer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenes\LoadingAnimation.cs" />
+    <Compile Include="Scenes\LoadingScene.cs" />
+    <Compile Include="Scenes\Menu\InGameMenuScene.cs" />
+    <Compile Include="Scenes\Menu\LoadGameScene.cs" />
+    <Compile Include="Scenes\Menu\MainMenuScene.cs" />
+    <Compile Include="Scenes\Menu\OptionsMenuScene.cs" />
+    <Compile Include="Scenes\Menu\SaveGameScene.cs" />
+    <Compile Include="Scenes\Nadrazi\Items\DvereItem.cs" />
+    <Compile Include="Scenes\Nadrazi\Items\HnizdoItem.cs" />
+    <Compile Include="Scenes\Nadrazi\Items\KlacekItem.cs" />
+    <Compile Include="Scenes\Nadrazi\Items\OknoItem.cs" />
+    <Compile Include="Scenes\Nadrazi\Items\RukaviceItem.cs" />
+    <Compile Include="Scenes\Nadrazi\Items\TlacitkoItem.cs" />
+    <Compile Include="Scenes\Nadrazi\Items\VataItem.cs" />
+    <Compile Include="Scenes\Nadrazi\NadraziScene.cs" />
+    <Compile Include="Scenes\Nadrazi\VcelyAnimation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="box2d, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CocosSharp.PCL.Shared.1.5.0.1\lib\portable-net45+win+wpa81+wp80\box2d.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CocosSharp, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CocosSharp.PCL.Shared.1.5.0.1\lib\portable-net45+win+wpa81+wp80\CocosSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MonoGame.Framework, Version=3.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CocosSharp.PCL.Shared.1.5.0.1\lib\portable-net45+win+wpa81+wp80\MonoGame.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Portable.Ninject.3.3.1\lib\portable-net4+sl5+wp8+win8+wpa81+monotouch+monoandroid+Xamarin.iOS\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>
